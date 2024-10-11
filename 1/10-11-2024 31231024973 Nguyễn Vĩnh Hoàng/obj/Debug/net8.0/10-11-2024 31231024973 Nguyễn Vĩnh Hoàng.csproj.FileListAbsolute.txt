@@ -1,0 +1,14 @@
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\obj\Debug\net8.0\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\obj\Debug\net8.0\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.AssemblyInfoInputs.cache
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\obj\Debug\net8.0\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.AssemblyInfo.cs
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\obj\Debug\net8.0\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\bin\Debug\net8.0\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.exe
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\bin\Debug\net8.0\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.deps.json
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\bin\Debug\net8.0\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.runtimeconfig.json
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\bin\Debug\net8.0\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.dll
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\bin\Debug\net8.0\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.pdb
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\obj\Debug\net8.0\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.dll
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\obj\Debug\net8.0\refint\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.dll
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\obj\Debug\net8.0\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.pdb
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\obj\Debug\net8.0\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.genruntimeconfig.cache
+C:\Users\Administrator\Downloads\1\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng\obj\Debug\net8.0\ref\10-11-2024 31231024973 Nguyễn Vĩnh Hoàng.dll
