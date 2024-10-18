@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LMS
+namespace NguyenVinhHoang_31231024973
 {
     class Program
     {
