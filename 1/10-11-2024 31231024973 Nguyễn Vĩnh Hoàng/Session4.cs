@@ -1,202 +1,331 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
-using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NguyenVinhHoang_31231024973 
+namespace _10_11_2024_31231024973
 {
-    internal class Session_04
+    internal class section4
     {
         public static void Main()
         {
-            //Exercise01();
-            //Exercise02();
-            //Exercise03();
-            //Exercise04();
-            //Exercise05();
-            //Exercise06();
-            Exercise07();
-            //Exercise08();
-            //Exercise09();
-            //Exercise10();
-            Console.WriteLine("Press any button to escape");
-            Console.ReadLine();
+            Question5();
+            Console.WriteLine("Press any key to stop");
+            Console.ReadKey();
+
         }
+
         /// <summary>
-        /// Write a C# Sharp program to display certain values of the function x = y2+ 2y + 1 (using integer numbers for y, ranging from -5 to +5).
+        /// to convert from degrees Celsius to Kelvin and Fahrenheit
         /// </summary>
-        public static void Exercise01()
+        public static void Question1()
         {
-            for (int y = -5; y <= 5; y++)
+            Console.Write("Enter Number: ");
+            int number = int.Parse(Console.ReadLine());
+            number = number % 2;
+            if (number == 0)
             {
-                int x = (y * y) + (2 * y) + 1;
-                Console.WriteLine($"y = {y}, x = {x}");
-            }
-        }
-        /// <summary>
-        /// Write a C# Sharp program that takes distance and time (hours, minutes, seconds) as input and displays speed in kilometers per hour(km/h) and miles per hour(miles/h).
-        /// </summary>
-        public static void Exercise02()
-        {
-            Console.Write("Enter the distance in kilometers:");
-            double distanceKm = double.Parse(Console.ReadLine());
-            Console.WriteLine("Enter time in hours, minutes, and seconds: ");
-            Console.Write("Hours: ");
-            int hours = int.Parse(Console.ReadLine());
-            Console.Write("Minutes: ");
-            int minutes = int.Parse(Console.ReadLine());
-            Console.Write("Seconds: ");
-            int seconds = int.Parse(Console.ReadLine());
-            double totalTimeHours = hours + (minutes / 60.0) + (seconds / 3600.0);
-            double speedKmh = distanceKm / totalTimeHours;
-            double speedMph = speedKmh * 0.621371;
-            Console.WriteLine($"Speed: {speedKmh:F2} km/h");
-            Console.WriteLine($"Speed: {speedMph:F2} miles/h");
-        }
-        /// <summary>
-        /// Write a C# Sharp program that takes a character as input and checks if it is a vowel, a digit, or any other symbol.
-        /// </summary>
-        public static void Exercise03()
-        {
-            Console.Write("Enter a character: ");
-            char inputChar = Console.ReadKey().KeyChar;
-            Console.WriteLine();
-            if ("aeiouAEIOU".IndexOf(inputChar) >= 0)
-            {
-                Console.WriteLine($"{inputChar} is a vowel.");
-            }
-            else if (char.IsDigit(inputChar))
-            {
-                Console.WriteLine($"{inputChar} is a digit.");
+                Console.WriteLine("This number is even");
             }
             else
             {
-                Console.WriteLine($"{inputChar} is a symbol or consonant.");
+                Console.WriteLine("This number is odd");
             }
+
         }
         /// <summary>
-        /// Write a C# Sharp program to check whether a given number is even or odd.
+        /// Inpur Radius for calculating surface and volume
         /// </summary>
-        public static void Exercise04()
+        public static void Question2()
         {
-            Console.Write("Enter a number: ");
-            string input = Console.ReadLine();
-            if (int.TryParse(input, out int number))
+            Console.Write("Enter 1st number: ");
+            float a = float.Parse(Console.ReadLine());
+            Console.Write("Enter 2sd number: ");
+            float b = float.Parse(Console.ReadLine());
+            Console.Write("Enter 3rd number: ");
+            float c = float.Parse(Console.ReadLine());
+            float biggest = a;
+            if (biggest < b)
             {
-                if (number % 2 == 0)
+                biggest = b;
+            }
+            if (biggest < c)
+            {
+                biggest = c;
+            }
+            Console.WriteLine("The biggest number is: " + biggest);
+        }
+        /// <summary>
+        /// Input a and b for calculating adding, subtracting,  multiplying and dividing 
+        /// </summary>
+        public static void Question3()
+        {
+            Console.Write("Enter x-axis value: ");
+            float x = float.Parse(Console.ReadLine());
+            Console.Write("Enter y-axis value: ");
+            float y = float.Parse(Console.ReadLine());
+            if (x == 0)
+            {
+                if (y == 0)
                 {
-                    Console.WriteLine($"{number} is even.");
+                    Console.WriteLine("The given point is located at the origin");
                 }
                 else
                 {
-                    Console.WriteLine($"{number} is odd.");
+                    Console.WriteLine("The given point is located on the y-axis");
                 }
-            }
-            else
-            {
-                Console.WriteLine("Invalid input. Please enter a valid integer.");
-            }
-        }
-        /// <summary>
-        /// Write a C# Sharp program to find the largest of three numbers.
-        /// </summary>
-        public static void Exercise05()
-        {
-            Console.Write("Enter the first number: ");
-            double num1 = double.Parse(Console.ReadLine());
-            Console.Write("Enter the second number: ");
-            double num2 = double.Parse(Console.ReadLine());
-            Console.Write("Enter the third number: ");
-            double num3 = double.Parse(Console.ReadLine());
-            double largest = num1;
-            if (num2 > largest)
-            {
-                largest = num2;
-            }
-            if (num3 > largest)
-            {
-                largest = num3;
-            }
-            Console.WriteLine($"The largest number is: {largest}");
-        }
-        /// <summary>
-        /// Write a C# Sharp program to accept a coordinate point in an XY coordinate system and determine in which quadrant the coordinate point lies.
-        /// </summary>
-        public static void Exercise06()
-        {
-            Console.Write("Enter the X coordinate: ");
-            double x = double.Parse(Console.ReadLine());
-            Console.Write("Enter the Y coordinate: ");
-            double y = double.Parse(Console.ReadLine());
-            if (x > 0 && y > 0)
-            {
-                Console.WriteLine("The point lies in the First Quadrant");
-            }
-            else if (x < 0 && y > 0)
-            {
-                Console.WriteLine("The point lies in the Second Quadrant");
-            }
-            else if (x < 0 && y < 0)
-            {
-                Console.WriteLine("The point lies in the Third Quadrant");
-            }
-            else if (x > 0 && y < 0)
-            {
-                Console.WriteLine("The point lies in the Fourth Quadrant");
-            }
-            else if (x == 0 && y == 0)
-            {
-                Console.WriteLine("The point lies at the Origin");
-            }
-            else if (x == 0)
-            {
-                Console.WriteLine("The point lies on the Y-axis");
             }
             else if (y == 0)
             {
-                Console.WriteLine("The point lies on the X-axis.");
+                Console.WriteLine("The given point is located on the x-axis");
             }
-        }
-        /// <summary>
-        /// Write a program to check whether a triangle is Equilateral, Isosceles or Scalene.
-        /// </summary>
-        public static void Exercise07()
-        {
-            Console.Write("Enter the length of side A: ");
-            double a = double.Parse(Console.ReadLine());
-            Console.Write("Enter the length of side B: ");
-            double b = double.Parse(Console.ReadLine());
-            Console.Write("Enter the length of side C: ");
-            double c = double.Parse(Console.ReadLine());
-            if (a + b > c || b + c > a || a + c > b)
+            else if (y > 0)
             {
-                if (a == b && b == c)
+                if (x > 0)
                 {
-                    Console.WriteLine("This is an Equilateral triangle");
-                }
-                else if (a == b || b == c || a == c)
-                {
-                    Console.WriteLine("This is an Isosceles triangle");
+                    Console.WriteLine("The given point is located in the first quadrant");
                 }
                 else
                 {
-                    Console.WriteLine("This is a Scalene triangle");
+                    Console.WriteLine("The given point is located in the second quadrant");
                 }
             }
-            else
+            else if (y < 0)
             {
-                Console.WriteLine("You entered a wrong value");
+                if (x < 0)
+                {
+                    Console.WriteLine("The given point is located in the third quadrant");
+                }
+                else
+                {
+                    Console.WriteLine("The given point is located in the fourth quadrant");
+                }
             }
         }
-        /// <summary>
-        /// Write a program to read 10 numbers and find their average and sum.
-        /// </summary>
-        public static void Exercise08()
+        public static void Question4()
         {
+            do
+            {
+                // Input three sides of the triangle
+                Console.Write("Insert three sides of the triangle! First side: ");
+                float a = float.Parse(Console.ReadLine());
+                Console.Write("Second side: ");
+                float b = float.Parse(Console.ReadLine());
+                Console.Write("Third side: ");
+                float c = float.Parse(Console.ReadLine());
 
+                // Check if the sides are valid to form a triangle
+                if ((a > 0)
+                    && (b > 0)
+                    && (c > 0)
+                    && (a <= b + c)
+                    && (b <= a + c)
+                    && (c <= a + b)
+                    )
+                {
+                    if (a == b)
+                    {
+                        if (b == c)
+                        {
+                            Console.WriteLine("This triangle is Equilateral");
+                        }
+                        else { Console.WriteLine("This triangle is Isosceles"); }
+                    }
+                    else if (b == c)
+                    {
+                        Console.WriteLine("This triangle is Isosceles");
+                    }
+                    else if (a == c)
+                    {
+                        Console.WriteLine("This triangle is Isosceles");
+                    }
+                    else
+                    {
+                        Console.WriteLine("This triangle is Scalene");
+                    }
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input! Please, try again!");
+                }
+            }
+            while (true);
+        }
+        public static void Question5()
+        {
+            // Input necessary numbers
+            // Distance
+            Console.Write("Input travel distance: ");
+            int distance = int.Parse(Console.ReadLine());
+            Console.Write("Is the distance in kilometer or mile (k/m)?");
+            string unit = Console.ReadLine();
+            
+            // Time
+            Console.Write("Input travel hours: ");
+            int h = int.Parse(Console.ReadLine());
+            Console.Write("Input travel minutes: ");
+            int m = int.Parse(Console.ReadLine()); 
+            Console.Write("Input travel seconds: ");
+            int s = int.Parse(Console.ReadLine());
+            float time = h + m / 60 + s / 3600;
+            
+            // Output
+            if (unit == "k" || unit =="K")
+            { 
+                Console.WriteLine("Travel speed is: " + (distance / time) + "(km/h)");
+                Console.WriteLine("Or " + (distance / time)*0.621371 + "(miles/h)");
+            }
+            else if (unit == "m" || unit == "M")
+            { 
+                Console.WriteLine("Travel speed is: " + (distance / time) + "(miles/h)");
+                Console.WriteLine("Or " + (distance / time)/0.621371 + "(km/h)");
+            }
+        public static void Question6()
+        {
+            Console.Write("Enter a number: ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= 10; i++)
+            {
+                float result = n * i;
+                Console.WriteLine($"{n} x {i} = {result}");
+            }
+            Console.ReadKey();
+        }
+        public static void Question7()
+        {
+            Console.WriteLine("Enter the pattern number that you want to see (1, 2, 3): ");
+            int n = int.Parse(Console.ReadLine());
+            switch (n)
+            {
+                case 1:
+                    Console.Write("Insert the rows: ");
+                    int rows = int.Parse(Console.ReadLine());
+                    for (int i = 1; i <= rows; i++)
+                    {
+                        for (int j = 1; j <= i; j++)
+                        {
+                            Console.Write(j);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 2:
+                    int k = 1;
+                    Console.Write("Insert the rows: ");
+                    int row1s = int.Parse(Console.ReadLine());
+                    for (int i = 1; i <= row1s; i++)
+                    {
+                        for (int j = 1; j <= i; j++)
+                        {
+                            Console.Write($"{k} ");
+                            k++;
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 3:
+                    int k1 = 1;
+                    Console.Write("Insert the rows: ");
+                    int row2s = int.Parse(Console.ReadLine());
+                    int space = row2s + 4 - 1;
+                    for (int i = 1; i <= row2s; i++)
+                    {
+                        for (int spc = space; spc >= 1; spc--)
+                            Console.Write(" ");
+                        for (int j = 1; j <= i; j++)
+                        {
+                            Console.Write($"{k1} ");
+                            k1++;
+                        }
+                        Console.WriteLine();
+                        space--;
+                    }
+                    break;
+            }          
+            Console.ReadKey(); 
+        }
+        public static void Question8()
+        {
+            float s = 0;
+            Console.Write("Enter a number: ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                if (i < n)
+                {
+                    Console.Write($"1/{i} + ");
+                    s += (float)1 / i;
+                }
+                else if (i == n)
+                {
+                    Console.Write($"1/{i}");
+                    s += (float)1 / i;
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("Sum of the series upto {0} terms: {1}", n, s);
+            Console.ReadKey();
+        }
+        public static void Question9()
+        {
+            Console.Write("Insert the start of the range: ");
+            int start = int.Parse(Console.ReadLine());
+            Console.Write("Insert the end of the range: ");
+            int end = int.Parse(Console.ReadLine());
+            for (int i = start; i <= end; i++)
+            {
+                int kq = 0;
+                for (int j = 1; j < i; j++)
+                {
+                    if (i % j == 0)
+                        kq += j;
+                }
+                if (i == kq)
+                    Console.WriteLine("{0} is the perfect number", i);
+            }
+            Console.ReadKey();
+        }
+        public static void Question10()
+        {
+            int demUoc = 0;
+            Console.Write("Enter a number: ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                    demUoc++;
+            }
+            if (demUoc == 2)
+                Console.WriteLine($"{n} is a prime number");
+            else
+                Console.WriteLine($"{n} is not a prime number");
+            Console.ReadKey();
+        }
+        public static void Question11()
+        {
+            for (int y = -5; y <= 5; y++)
+            {
+                int x = y*y + 2*y + 1;
+                Console.WriteLine("Certain value of function x when y = {0} la: {1}",y,x);
+            }
+            Console.ReadKey();
+        }
+        public static void Question12() 
+        {
+            /*Console.Write("Input the character: ");
+            if (c == 'a' || c == 'e' || c == 'o' || c == 'u' || c == 'i'|| c == 'A' || c == 'E' || c == 'O' || c == 'U' || c == 'I')
+            {
+                Console.WriteLine("The character you insert is vowel");
+            }
+            else if (char.IsDigit(c))
+            {
+                Console.WriteLine("The character you insert is digit");
+            }
+            else
+                Console.WriteLine("The character you insert is other symbol"); */
         }
     }
 }
+        
